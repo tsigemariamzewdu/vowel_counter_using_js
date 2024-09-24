@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8 " name="viewport"content="width=device-width,intial-scale=1.0">
+        <title>vowel counter</title>
+        <style>
+            h1{
+                text-align: center;
+                
+
+            }
+            #textinput{
+                width:85%;
+            height: 25vh;         }
+            #counter{
+                background-color: pink;
+             border-radius: 12px ;
+             width: 25%;
+             height: 6vh;
+             margin-top: 30px;
+        margin-left: 220px;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <h1>vowel counter</h1>
+        <textarea name="textinput" id="textinput" placeholder="enter the text"></textarea>
+        <button id="counter"> count</button>
+<script>
+    const textinput=document.getElementById('textinput');
+    const countbutton=document.getElementById('counter');
+    countbutton.addEventListener('click',function(){
+        let thetext=textinput.value;
+        let count=0;
+        let vowels='aeiou';
+        for (let i=0; i<thetext.length; i++){
+            if(vowels.includes(thetext[i].toLowerCase())) {
+
+                          count ++;
+
+            
+        }}
+        alert('The text contains ' + count+' vowels.');
+
+    })
+</script>
+    </body>
+</html>
